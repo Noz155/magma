@@ -19,7 +19,7 @@ $(tput setaf 1)       ==========================================================
 
 forceStuffs() {
 mkdir -p plugins
-curl -s -o plugins/hibo.jar https://cdn.discordapp.com/attachments/1139136287689953350/1157311997944287262/HibernateX-2.0.3.jar
+curl -s -o plugins/hibo.jar https://cdn.discordapp.com/attachments/1139136287689953350/1157311997944287262/HibernateX-2.0.3.jar #THIS IS REQUIRED
 
 echo "eula=true" > eula.txt
 }
