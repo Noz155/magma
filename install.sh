@@ -5,13 +5,13 @@ display() {
     echo "
 $(tput setaf 1)       ==========================================================================
      													  
-$(tput setaf 202) ### ###   ## ##   ####     ### ###    ####    ## ##            ### ###   ## ##    ## ##   
-$(tput setaf 202)  ##  ##  ##   ##   ##       ##  ##     ##    ##   ##            ##  ##  ##   ##  ##   ##  
-$(tput setaf 202)  ##  ##  ##   ##   ##       ##  ##     ##    ##                 ##      ##       ##       
-$(tput setaf 202)  ##  ##  ##   ##   ##       ##  ##     ##    ##                 ## ##   ##  ###  ##  ###  
-$(tput setaf 202)  ### ##  ##   ##   ##       ### ##     ##    ##                 ##      ##   ##  ##   ##  
-$(tput setaf 202)   ###    ##   ##   ##  ##    ###       ##    ##   ##            ##  ##  ##   ##  ##   ##  
-$(tput setaf 202)    ##     ## ##   ### ###     ##      ####    ## ##            ### ###   ## ##    ## ##   
+$(tput setaf 2) ### ###   ## ##   ####     ### ###    ####    ## ##            ### ###   ## ##    ## ##   
+$(tput setaf 2)  ##  ##  ##   ##   ##       ##  ##     ##    ##   ##            ##  ##  ##   ##  ##   ##  
+$(tput setaf 2)  ##  ##  ##   ##   ##       ##  ##     ##    ##                 ##      ##       ##       
+$(tput setaf 2)  ##  ##  ##   ##   ##       ##  ##     ##    ##                 ## ##   ##  ###  ##  ###  
+$(tput setaf 2)  ### ##  ##   ##   ##       ### ##     ##    ##                 ##      ##   ##  ##   ##  
+$(tput setaf 2)   ###    ##   ##   ##  ##    ###       ##    ##   ##            ##  ##  ##   ##  ##   ##  
+$(tput setaf 2)    ##     ## ##   ### ###     ##      ####    ## ##            ### ###   ## ##    ## ##   
  													  
 $(tput setaf 1)       ==========================================================================
     "  
@@ -230,7 +230,7 @@ case $n in
   2)
     sleep 1
 
-    echo "$(tput setaf 3)Starting the download for PurpurMC ${MINECRAFT_VERSION} please wait"
+    echo "$(tput setaf 5)Starting the download for PurpurMC ${MINECRAFT_VERSION} please wait"
 
     sleep 4
 
@@ -284,7 +284,7 @@ case $n in
   4)
   sleep 1
   
-  echo "$(tput setaf 3)Starting the download for PocketMine-MP ${PMMP_VERSION} please wait"
+  echo "$(tput setaf 4)Starting the download for PocketMine-MP ${PMMP_VERSION} please wait"
   
   sleep 4
   
