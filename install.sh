@@ -14,8 +14,8 @@ $(tput setaf 2)   ###    ##   ##   ##  ##    ###       ##    ##   ##            
 $(tput setaf 2)    ##     ## ##   ### ###     ##      ####    ## ##            ### ###   ## ##    ## ##   
  													  
 $(tput setaf 1)       ==========================================================================
-
-$(tput setaf 3) Running VolvicEgg v1.1 - loaded successfully
+																																													
+$(tput setaf 3)Running VolvicEgg v1.1 - loaded successfully
     "  
 }
 
