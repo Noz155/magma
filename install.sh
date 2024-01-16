@@ -187,13 +187,48 @@ if [ ! -e "server.jar" ] && [ ! -e "nodejs" ] && [ ! -e "PocketMine-MP.phar" ]; 
 sleep 5
 echo "
   $(tput setaf 3)Which platform are you gonna use?
-  1) Paper             2) Purpur
-  3) BungeeCord        4) PocketmineMP
-  5) Node.js
+  0) Auto	       1) Paper
+  2) Purpur	       4) PocketmineMP
+  3) BungeeCord	       5) Node.js
   "
 read -r n
 
 case $n in
+  0) 
+    sleep 1
+
+    echo "$(tput setaf 3)Starting the download for PaperMC ${MINECRAFT_VERSION} please wait"
+
+    sleep 4
+
+    forceStuffs
+    
+    installJq
+
+    VER_EXISTS=$(curl -s https://api.papermc.io/v2/projects/paper | jq -r --arg VERSION $MINECRAFT_VERSION '.versions[] | contains($VERSION)' | grep -m1 true)
+	LATEST_VERSION=$(curl -s https://api.papermc.io/v2/projects/paper | jq -r '.versions' | jq -r '.[-1]')
+
+	if [ "${VER_EXISTS}" == "true" ]; then
+		echo -e "Version is valid. Using version ${MINECRAFT_VERSION}"
+	else
+		echo -e "Specified version not found. Defaulting to the latest paper version"
+		MINECRAFT_VERSION=${LATEST_VERSION}
+	fi
+	
+	BUILD_NUMBER=$(curl -s https://api.papermc.io/v2/projects/paper/versions/${MINECRAFT_VERSION} | jq -r '.builds' | jq -r '.[-1]')
+	JAR_NAME=paper-${MINECRAFT_VERSION}-${BUILD_NUMBER}.jar
+	DOWNLOAD_URL=https://api.papermc.io/v2/projects/paper/versions/${MINECRAFT_VERSION}/builds/${BUILD_NUMBER}/downloads/${JAR_NAME}
+	
+	curl -o server.jar "${DOWNLOAD_URL}"
+
+    display
+    
+    echo -e ""
+    
+    optimizeJavaServer
+    launchJavaServer
+    forceStuffs
+  ;;
   1) 
     sleep 1
 
