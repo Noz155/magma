@@ -35,7 +35,7 @@
     },
     "scripts": {
         "installation": {
-            "script": "#!\/bin\/ash\r\n# Klovit Installation Script\r\n#\r\n# Server Files: \/mnt\/server\r\napt update\r\napt-get install -y curl\r\ncd \/mnt\/server\r\ncurl -o install.sh https:\/\/raw.githubusercontent.com\/beastgamer81\/klovitegg\/main\/install.sh",
+            "script": "#!\/bin\/ash\r\n# Klovit Installation Script\r\n#\r\n# Server Files: \/mnt\/server\r\napt update\r\napt-get install -y curl\r\ncd \/mnt\/server\r\ncurl -o installer.sh https:\/\/raw.githubusercontent.com\/Noz155\/volvicegg\/main\/install.sh",
             "container": "debian:buster-slim",
             "entrypoint": "bash"
         }
